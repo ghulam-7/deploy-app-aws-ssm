@@ -23,7 +23,7 @@ spec:
           emptyDir: {}
       containers:
         - name: frontend
-          image: docker.io/ghulam6703/tapestry:6
+          image: docker.io/ghulam6703/tapestry:21
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - name: nginx-tmp
