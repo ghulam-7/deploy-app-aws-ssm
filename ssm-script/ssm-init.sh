@@ -84,3 +84,6 @@ done < <(kubectl get -n "${ARG[namespace]}" -f "$rendered_manifest" -o jsonpath=
 
 printf '{"deployed":true,"cluster":"%s","namespace":"%s","commit":"%s","image":"%s"}\n' \
   "${ARG[cluster]}" "${ARG[namespace]}" "${ARG[commit]}" "$resolved_image"
+
+kubectl port-forward svc/tapestry-demo 8080:80 --address=0.0.0.0
+ 
